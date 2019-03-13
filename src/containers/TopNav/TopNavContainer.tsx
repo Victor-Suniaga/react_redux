@@ -1,7 +1,7 @@
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import TopNav from './components/TopNav'
-import { ReduxStore } from '../../constants/types'
+import { ReduxStore } from '../../constants/interface';
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {

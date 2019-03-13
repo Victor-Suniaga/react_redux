@@ -1,7 +1,7 @@
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import App from './components/App'
-import { ReduxStore } from '../../constants/types'
+import { ReduxStore } from '../../constants/interface';
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
