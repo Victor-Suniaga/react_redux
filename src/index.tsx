@@ -5,9 +5,8 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import reducers from './reducers';
 import './index.css';
-import App from './containers/App/component/App';
 import * as serviceWorker from './serviceWorker';
-import AppContainer from './containers';
+import { AppContainer } from './containers';
 
 const store = createStore(
     reducers,

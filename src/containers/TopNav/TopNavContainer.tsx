@@ -1,6 +1,6 @@
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect } from 'react-redux'
-import App from './components/App'
+import TopNav from './components/TopNav'
 import { ReduxStore } from '../../constants/types'
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
@@ -15,4 +15,4 @@ const mapStateToProps = (state: ReduxStore) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(TopNav)
