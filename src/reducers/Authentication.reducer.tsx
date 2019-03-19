@@ -6,7 +6,8 @@ import { Auth_State } from '../constants/interface';
 const INITIAL_STATE: Auth_State = {
     sessionTime: 0,
     token: '',
-    signInTime: null
+    signInTime: null,
+    username: ''
 }
 
 export default function (state = INITIAL_STATE, action: AuthAction): Auth_State {

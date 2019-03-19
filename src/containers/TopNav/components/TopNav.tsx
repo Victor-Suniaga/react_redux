@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import { HeaderContainer, Button } from './StyledComponents';
 
-class TopNav extends Component {
+interface TopNavProps {
+  actions: {
+    appSignIn: () => any
+  },
+  user: String,
+}
+class TopNav extends Component<TopNavProps,{}> {
+
+  constructor(props: TopNavProps) {
+    super(props);
+    this.handleSignIn = this.handleSignIn.bind(this);
+  }
+
+  handleSignIn() {
+    this.props.actions.appSignIn();
+  }
+
+
   render() {
     return (
       <HeaderContainer>
-          <Button>
+        {this.props.user === '' ? (
+          <Button onClick={this.handleSignIn}>
               Sign In
-          </Button>
+        </Button> ) : <p>{this.props.user}</p>}
       </HeaderContainer>
     );
   }
